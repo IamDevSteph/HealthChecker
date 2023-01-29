@@ -14,8 +14,9 @@ import javax.annotation.Resource;
 import java.util.Collection;
 import java.util.Optional;
 
+@RestController
 public class UserController {
-    @RestController
+
 
     @Resource
     private UserRepository userRepo;
