@@ -20,7 +20,7 @@ public class DiagnosisController {
 
     }
 
-    @RequestMapping("/dianosis/{id}")
+    @RequestMapping("/diagnosis/{id}")
     public String displaySingleDiagnosticResult(@PathVariable Long id, Model model){
         Optional<Diagnosis> retrievedDiagnosis = diagnosisRepo.findDiagnosisById(id);
         model.addAttribute("diagnostic result", retrievedDiagnosis);
