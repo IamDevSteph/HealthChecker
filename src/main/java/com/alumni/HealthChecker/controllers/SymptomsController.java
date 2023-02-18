@@ -22,7 +22,7 @@ public class SymptomsController {
     }
     @RequestMapping("/symptoms/{id}")
     public String displaySingleSymptom(@PathVariable Long id, Model model){
-        Optional<Symptoms> retrievedSymptoms = symptomsRepo.findBySymptomsById(id);
+        Optional<Symptoms> retrievedSymptoms = symptomsRepo.findSymptomsById(id);
         model.addAttribute("symptom", retrievedSymptoms);
         return "symptomTemplate";
     }
