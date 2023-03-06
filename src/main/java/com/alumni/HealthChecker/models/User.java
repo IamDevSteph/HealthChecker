@@ -1,32 +1,36 @@
 package com.alumni.HealthChecker.models;
+import javax.persistence.*;
 
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.GeneratedValue;
-
+@Entity
+@Table(name="users")
 public class User {
+
+    //id (int/PRIMARY KEY), name(String/TEXT), age(int) ???
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
+    public String name;
+    public int age;
 
-    private Long id;
+    public User(){
 
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String email;
-    private String phone;
-    private String profilePicture;
-    private String password;
-    private String country;
-    private String state;
-    private String county;
-    private String city;
-    private String address1;
-    private String address2;
-    private String zipCode;
+    }
 
+    public User(Long id, String name, int age){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 
+    public Long getId() {
+        return id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
-
+    public int getAge() {
+        return age;
+    }
 }

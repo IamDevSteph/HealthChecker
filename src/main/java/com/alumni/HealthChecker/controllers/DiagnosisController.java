@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import java.util.Optional;
 
 public class DiagnosisController {
+
     @Resource
     private DiagnosisRepository diagnosisRepo;
 
@@ -21,9 +22,10 @@ public class DiagnosisController {
     }
 
     @RequestMapping("/diagnosis/{id}")
-    public String displaySingleDiagnosticResult(@PathVariable Long id, Model model){
+    public String displaySingleDiagnosis(@PathVariable Long id, Model model){
         Optional<Diagnosis> retrievedDiagnosis = diagnosisRepo.findDiagnosisById(id);
-        model.addAttribute("diagnostic result", retrievedDiagnosis);
+        model.addAttribute("diagnostic", retrievedDiagnosis);
+
         return "diagnosticTemplate";
     }
 }
