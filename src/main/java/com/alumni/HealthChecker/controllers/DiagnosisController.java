@@ -18,12 +18,14 @@ public class DiagnosisController {
     public String displayDiagnosis(Model model){
         model.addAttribute("diagnosis", diagnosisRepo.findAll());
         return "diagnosisTemplate";
+
     }
 
     @RequestMapping("/diagnosis/{id}")
     public String displaySingleDiagnosis(@PathVariable Long id, Model model){
         Optional<Diagnosis> retrievedDiagnosis = diagnosisRepo.findDiagnosisById(id);
         model.addAttribute("diagnostic", retrievedDiagnosis);
+
         return "diagnosticTemplate";
     }
 }

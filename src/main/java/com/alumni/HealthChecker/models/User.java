@@ -1,6 +1,4 @@
 package com.alumni.HealthChecker.models;
-
-
 import javax.persistence.*;
 
 @Entity

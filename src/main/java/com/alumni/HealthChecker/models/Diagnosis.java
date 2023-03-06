@@ -35,5 +35,8 @@ public class Diagnosis {
     public String getName(){
         return name;
     }
+
+    public Collection<Symptoms> getSymptoms(){ return symptoms; }
+
     //create diagnosis repository and diagnosis controller. Need to create One to Many for Diagnosis and Many to Many for Symptoms.
 }
