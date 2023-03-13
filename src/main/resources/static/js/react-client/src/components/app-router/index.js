@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import AboutDevsScreen from '../../pages/aboutdevs-screen';
 import ContactScreen from '../../pages/contact-screen';
@@ -10,11 +10,9 @@ import ProfileScreen from '../../pages/profile-screen';
 import SignupScreen from '../../pages/signup-screen';
 import UserhomeScreen from '../../pages/userhome-screen';
 
-
-
 const AppRouter = () => {
     return (
-        <Switch>
+        <Route>
             <Route exact path={'/about-developers'} component={AboutDevsScreen} />
             <Route exact path={'/contact'} component={ContactScreen} />
             <Route exact path={'*'} component={ErrorScreen} />
@@ -24,7 +22,7 @@ const AppRouter = () => {
             <Route exact path={'/profile'} component={ProfileScreen} />
             <Route exact path={'/signup'} component={SignupScreen} />
             <Route exact path={'/home'} component={UserhomeScreen} />
-        </Switch>
+        </Route>
     );
 }
 
