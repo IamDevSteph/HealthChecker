@@ -31,6 +31,14 @@ public class populator implements CommandLineRunner {
         diagnosisRepo.save(testCold);
         diagnosisRepo.save(testFlu);
 
+        Symptoms testCough = new Symptoms(1L, "testCold", "incessant coughing", testCold);
+        symptomsRepo.save(testCough);
+
+
+        //Track symptoms, highlighted pattern/trend, track official diagnosis from medical team.
+        //Track duration and log times of illnesses with a Calendar function.
+
+
     }
 
 
